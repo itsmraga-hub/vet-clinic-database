@@ -4,11 +4,11 @@
 --     name varchar(100)
 -- );
 
-CREATE TABLE animals(
-    id INT primary key not null,
-    name TEXT not null,
+CREATE TABLE ANIMALS(
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    name TEXT NOT NULL,
     date_of_birth DATE,
-    escape_attempts INT not null,
+    escape_attempts INT NOT NULL,
     neutered BOOL,
     weight_kg DECIMAL
 );
