@@ -5,7 +5,7 @@
 -- );
 
 CREATE TABLE ANIMALS(
-    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    id INT PRIMARY KEY NOT NULL,
     name TEXT NOT NULL,
     date_of_birth DATE,
     escape_attempts INT NOT NULL,
