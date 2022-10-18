@@ -12,3 +12,5 @@ CREATE TABLE ANIMALS(
     neutered BOOL,
     weight_kg DECIMAL
 );
+
+ALTER TABLE animals ADD COLUMN species TEXT;
