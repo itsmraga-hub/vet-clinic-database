@@ -40,8 +40,40 @@ INSERT INTO owners (full_name, age) VALUES ('Dean Winchester', 14);
 
 INSERT INTO owners (full_name, age) VALUES ('Jodie Whittaker', 38);
 
+
 -- INSERT DATA INTO SPECIES TABLE
 
 INSERT INTO species (name) VALUES ('Pokemon');
 
 INSERT INTO species (name) VALUES ('Digimon');
+
+
+-- Modify inserted animals so it includes species_id value
+
+UPDATE animals SET species_id = 2 WHERE name LIKE '%mon';
+
+UPDATE animals SET species_id = 1 WHERE name NOT LIKE '%mon';
+
+-- Modify your inserted animals to include owner information (owner_id)
+
+UPDATE animals SET owner_id = 1 WHERE name = 'Agumon';
+
+UPDATE animals SET owner_id = 2 WHERE name = 'Gabumon';
+
+UPDATE animals SET owner_id = 2 WHERE name = 'Pikachu';
+
+UPDATE animals SET owner_id = 3 WHERE name = 'Devimon';
+
+UPDATE animals SET owner_id = 3 WHERE name = 'Plantmon';
+
+UPDATE animals SET owner_id = 4 WHERE name = 'Charmander';
+
+UPDATE animals SET owner_id = 4 WHERE name = 'Squirtle';
+
+UPDATE animals SET owner_id = 4 WHERE name = 'Blossom';
+
+UPDATE animals SET owner_id = 5 WHERE name = 'Angemon';
+
+UPDATE animals SET owner_id = 5 WHERE name = 'Boarmon';
+
+
