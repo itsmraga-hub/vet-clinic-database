@@ -179,3 +179,23 @@ SELECT COUNT(*) FROM vets LEFT JOIN specializations ON specializations.species_i
 -- What specialty should Maisy Smith consider getting? Look for the species she gets the most.
 
 SELECT COUNT(animals.id), animals.* FROM animals JOIN vets ON visits.vets_id = vets.id JOIN visits ON animals.id = visits.animals_id WHERE vets.name = 'Maisy Smith' GROUP BY animals.id ORDER BY COUNT(animals.id) DESC LIMIT 1;
+
+-- Database Performance Audit
+-- Query Without Performance and Normalization
+SELECT COUNT(*) FROM visits where animal_id = 4;
+SELECT * FROM visits where vet_id = 2;
+SELECT * FROM owners where email = 'owner_18327@mail.com';
+
+-- Query with Performance and Normalization using EXPLAIN ANALYZE
+EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animal_id = 4; -- Excecution time: 4894.559 ms
+
+EXPLAIN ANALYZE SELECT * FROM visits where vet_id = 2; -- Exceution Time 1367.615ms
+
+EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com'; -- Execution Time 879.584ms
+
+/* Actions to improve performance by creating indexex*/
+CREATE INDEX visits_animal_index ON visits(animal_id); -- Excecution Time: 535.796ms
+
+CREATE INDEX visits_vet_index ON visits(vet_id); -- Excecution Time: 767.760ms
+
+CREATE INDEX owners_email_index ON owners(email); -- Excecution Time: 0.147ms
