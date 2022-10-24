@@ -19,6 +19,13 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Twitter: [William Raga](https://twitter.com/@RagaMacharia)
 - LinkedIn: [itsmraga](https://linkedin.com/in/itsmraga)
 
+👤 **David Kasilia**
+
+- GitHub: [@David-kasilia](https://github.com/David-Kasilia)
+- Twitter: [David kasilia](https://twitter.com/DavidKasilia)
+- LinkedIn: [David Kasilia](https://www.linkedin.com/in/david-kasilia-846241211/
+)
+
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
